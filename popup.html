@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      width: 260px;
+      padding: 16px 16px 8px 16px;
+      background-color: #f9f9f9;
+      color: #333;
+      direction: rtl;
+    }
+
+    h4 {
+      margin: 8px 0 6px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .user, .label {
+      display: block;
+      margin: 4px 0;
+    }
+
+    .list-box {
+      background: #fff;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      max-height: 120px;
+      overflow-y: auto;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background-color: #f9f9f9;
+      padding-bottom: 8px;
+      z-index: 1;
+    }
+
+    button {
+      flex: 1;
+      margin: 0 4px;
+      padding: 6px 8px;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    #apply {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #apply:hover {
+      background-color: #45a049;
+    }
+
+    #clear {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
+    #clear:hover {
+      background-color: #d5d5d5;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-row">
+    <button id="apply">اعمال فیلتر</button>
+    <button id="clear">نمایش همه</button>
+  </div>
+
+  <h4>اعضا</h4>
+  <div id="userList" class="list-box">در حال بارگذاری اعضا...</div>
+
+  
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 16px; margin-bottom: 8px;">
+    <h4 style="margin: 0; font-size: 14px;">برچسب‌ها</h4>
+    <input type="text" id="labelSearch" placeholder="جستجو..." style="flex: 1; padding: 4px; border-radius: 6px; border: 1px solid #ccc; font-size: 12px;">
+  </div>
+
+  <div id="labelList" class="list-box">در حال بارگذاری برچسب‌ها...</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
